@@ -10,6 +10,9 @@
 body {
     width: 100%;
     height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 /* container styles */
@@ -41,7 +44,7 @@ body {
 }
 
 .result-heading {
-    font-size: 8px;
+    font-size: 12px;
 }
 
 .score {
@@ -64,12 +67,17 @@ body {
 }
 
 .result-content-heading {
-    font-size: 12px;
+    font-size: 25px;
 }
 
 .content {
     text-align: center;
     font-size: 18px;
+}
+
+.content p {
+    width: 90%;
+    margin: auto;
 }
 
 /* summary styles */
@@ -148,10 +156,11 @@ button {
 }
 
 /* footer styles */
-footer {
-    position: absolute;
-    bottom: 2svh;
-    left: 40svh;
+.footer {
+    width: 60%;
+    position: relative;
+    top: 45%;
+    left: 20%;
 }
 
 .attribution {
@@ -160,17 +169,22 @@ footer {
 }
 
 /* BREAKPOINTS */
+@media (max-width: 1075px) {
+    .attribution {
+        font-size: 18px;
+    }
+}
+
 @media (max-width: 900px) {
     body {
-        width: 100%;
-        height: 100svh;
+        height: 114svh;
         display: flex;
         flex-direction: column;
     }
     .container {
         top: 50%;
         width: 300px;
-        height: 90svh;
+        height: 100svh;
         flex-direction: column;
     }
 
@@ -180,15 +194,29 @@ footer {
         left: 0;
         width: 100%;
         height: 50%;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
     }
 
-    .result-content-heading {
-        margin-top: 12%;
+    .result-heading {
+        font-size: 10px;
     }
 
     .content {
         font-size: 10px;
         width: 65%;
+        height: 75px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+    .result-content-heading {
+        font-size: 18px;
+    }
+
+    .content p {
+        width: 100%;
     }
 
     .summary {
@@ -200,11 +228,39 @@ footer {
     }
 
     .summary .summary-heading {
-        margin-top: 1%;
+        margin-top: 5%;
         margin-left: 8.5%;
+        font-size: 10px;
     }
 
     .skills {
         margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    .skill-item {
+        height: 30px;
+    }
+
+    .icon {
+        width: 10%;
+        height: 20px;
+    }
+
+    .skill-item span {
+        font-size: 11px;
+        width: 50%;
+    }
+
+
+    .attribution {
+        font-size: 15px;
+        font-weight: 400;
+    }
+ }
+
+ @media (max-width: 740px) {
+    .attribution {
+        font-size: 14px;
     }
  }
