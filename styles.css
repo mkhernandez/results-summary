@@ -24,6 +24,27 @@
 /* results styles */
 .results {
     width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid red;
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 125px;
+    height: 125px;
+    border: 1px solid blue;
+    border-radius: 50%;
+}
+
+.content {
+    text-align: center;
 }
 
 /* summary styles */
