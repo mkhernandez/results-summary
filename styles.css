@@ -124,8 +124,31 @@ body {
     justify-content: space-around;
     align-items: center;
     border-radius: 10px;
-    border: 1px solid black;
     margin: 10px 0;
+}
+
+.reaction {
+    background-color: hsla(0, 100%, 88%, 0.2);
+    color: hsla(0, 100%, 67%, 1);
+    font-weight: 500;
+}
+
+.memory {
+    background-color: hsla(39, 100%, 88%, 0.2);
+    color: hsla(39, 100%, 56%, 1);
+    font-weight: 500;
+}
+
+.verbal {
+    background-color: hsla(166, 100%, 88%, 0.2);
+    color: hsla(166, 100%, 37%, 1);
+    font-weight: 500;
+}
+
+.visual {
+    background-color: hsla(234, 85%, 88%, 0.2);
+    color: hsla(234, 85%, 45%, 1);
+    font-weight: 500;
 }
 
 .icon {
@@ -143,6 +166,12 @@ body {
     width: 33%;
     display: flex;
     justify-content: center;
+    color: hsla(224, 30%, 27%, 0.5);
+    font-weight: 700;
+}
+
+strong {
+    color: hsl(224, 30%, 27%);
 }
 
 .button-item {
@@ -195,7 +224,7 @@ button {
     .container {
         top: 50%;
         width: 300px;
-        height: 100svh;
+        height: 115svh;
         flex-direction: column;
     }
 
@@ -263,6 +292,9 @@ button {
         width: 50%;
     }
 
+    .button-item {
+        margin: 0 auto 30px auto;
+    }
 
     .attribution {
         font-size: 15px;
