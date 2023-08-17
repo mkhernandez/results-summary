@@ -131,24 +131,49 @@ body {
     background-color: hsla(0, 100%, 88%, 0.2);
     color: hsla(0, 100%, 67%, 1);
     font-weight: 500;
+    transition: transform 0.5s ease;
+}
+
+.reaction:hover {
+    transform: scale(1.1);
+    background-color: hsla(0, 100%, 77%, 0.5);
 }
 
 .memory {
     background-color: hsla(39, 100%, 88%, 0.2);
     color: hsla(39, 100%, 56%, 1);
     font-weight: 500;
+    transition: transform 0.5s ease;
+}
+
+.memory:hover {
+    transform: scale(1.1);
+    background-color: hsla(39, 100%, 77%, 0.5);
 }
 
 .verbal {
     background-color: hsla(166, 100%, 88%, 0.2);
     color: hsla(166, 100%, 37%, 1);
     font-weight: 500;
+    transition: transform 0.5s ease;
+}
+
+.verbal:hover {
+    transform: scale(1.1);
+    background-color: hsla(166, 100%, 77%, 0.5);
+
 }
 
 .visual {
     background-color: hsla(234, 85%, 88%, 0.2);
     color: hsla(234, 85%, 45%, 1);
     font-weight: 500;
+    transition: transform 0.5s ease;
+}
+
+.visual:hover {
+    transform: scale(1.1);
+    background-color: hsla(234, 85%, 77%, 0.5);
 }
 
 .icon {
@@ -190,6 +215,12 @@ button {
     color: #fff;
     background-color: black;
     font-size: 18px;
+    transition: all 0.5s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+    font-size: 22px;
 }
 
 /* footer styles */
