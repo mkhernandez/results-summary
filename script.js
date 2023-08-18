@@ -1,15 +1,10 @@
 const url = './data.json';
-const d = document.querySelector('.score');
-const newP = document.createElement('p'); 
 
 //get data from json file
 const getData = async () => {
     try {
         const res = await axios.get(url);
-        console.log(res.data);
-        newP.append(res.data.score);
-        d.append(newP);
-
+        return res.data;
     } catch (e) {
         console.log('ERROR: ', e);
     }
@@ -19,7 +14,16 @@ const getData = async () => {
 const addData = async () => {
     try {
         const data = await getData();
-        console.log(data);
+        data.forEach(element => {
+            const result = element.category;
+            const text = result.toLowerCase();
+            const skills = document.getElementById('skills');
+            const div = document.createElement('div');
+            div.classList.add('skill-item', `${text}`);
+            skills.appendChild(div);
+            div.innerHTML = `<img src=${element.icon} class="icon"></img><span>${element.category}</span><span class="rating"><strong>${element.score}</strong>  / 100</span>`;
+            console.log(div);
+        });
     } catch (e) {
         console.log('ERROR: ', e);
     }
@@ -27,6 +31,8 @@ const addData = async () => {
 
 window.addEventListener('load', () => {
     addData();
+    
 });
+
 
 
